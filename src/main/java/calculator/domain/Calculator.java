@@ -12,8 +12,8 @@ public class Calculator {
     private static final int ODD_NUMBER = 1;
     private static final int EVEN_NUMBER = 0;
     private static final int FIRST_INDEX = 0;
-    private static final int SECOND_INDEX = 0;
-    private static final int THIRD_INDEX = 0;
+    private static final int SECOND_INDEX = 1;
+    private static final int THIRD_INDEX = 2;
 
     private static final String DELIMITER = " ";
 
@@ -30,7 +30,7 @@ public class Calculator {
             operators.remove(FIRST_INDEX);
 
 
-            result += Operator.execute(operator, operands.get(FIRST_INDEX), operands.get(SECOND_INDEX));
+            result = Operator.execute(operator, operands.get(FIRST_INDEX), operands.get(SECOND_INDEX));
             operands.subList(FIRST_INDEX, THIRD_INDEX).clear();
 
             addResult(result);
