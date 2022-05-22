@@ -20,4 +20,5 @@ class StringUtilsTest {
     void null_문자열_테스트() {
         assertThatNullPointerException().isThrownBy(() -> StringUtils.isNullOrBlank(null));
     }
+
 }
